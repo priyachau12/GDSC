@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,26 +20,50 @@
 
     
 }
-
+body {   font-family: Arial, sans-serif;
+        }
 
 /* Adding this CSS for mobile devices */
 @media screen and (max-width: 767px) {
+  body {
+    /* font-family: Arial, sans-serif; */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+html, body {
+    font-family: Arial, sans-serif;
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+  
   .header {
     flex-direction: column;
     text-align: center;
+    padding: 10px;
   }
 
-  .logo {
+  .logo img {
     margin-bottom: 10px;
+    height: 40px;
   }
+  .navtab div {
+  margin-bottom: 10px ;
+  text-align: center;
+}
 
-  .navtab {
+  /* .navtab {
     margin-top: 10px;
-  }
+  } */
 
   .landing-page-img img {
-    max-width: 100%;
-    height: auto;
+    /* max-width:20px ;
+    height: 20px; */
+    /* height: 40px; */
+    max-width: 200px;
+  max-height: 200px;
   }
 
   .landing-page {
@@ -52,11 +78,13 @@
 
   .btn-container {
     margin-top: 20px;
+    text-align: center;
   }
 
   .btn {
     font-size: 16px;
     padding: 10px 20px;
+    margin-bottom: 10px; 
   }
 
   .fa-angle-double-down {
@@ -71,44 +99,164 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-left: 0px;
+    max-width: 250px;
+    margin-right: 0px;
+    /* margin:30px 0; */
   }
+  .landing-page-img img,
+.pic1 img,
+.pic2 img,
+.pic3 img {
+  max-width: 200px;
+  max-height: 200px;
+  height: auto;
+}
 
-  .pic1, .pic2, .pic3 {
-    margin: 0;
+  .container1.pic1,.container2.pic2,.container3.pic3 {
+    margin-left: 0px;
+    max-width: 2%;
+    max-height: 20px;
+    
   }
 
   .text-container1, .text-container2, .text-container3 {
     margin-top: 20px;
     flex-direction: column;
+    font-size: 6px;
+    font-weight: 50px;
+    margin-left: 0px;
+    max-width: 100px;
   }
 
   .text1, .text2, .text3 {
-    margin: 0;
-    font-size: 18px;
+    max-width: 100px;
+    margin-top: 10px;
+    font-size: 6px;
+    font-weight: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .rul1, .rul2, .rul3 {
     display: none;
   }
-
+  .container1 .rul1,.container2 .rul2,
+.container3 .rul3 {
+  border-right: none; /* Removeing border for mobile view */
+  /* border-top: 14px solid #0F9D56;
+  margin: 0 auto; */
+}
+.images-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    margin-right: 0px;
+    /* flex-direction: column; */
+  }
+  .gif{
+    margin-left: 0px!important;
+    flex-shrink:unset;
+    /* max-width: 10px;
+  max-height: 10px; */
+  }
   .tech-pic img {
-    max-width: 100%;
+    
+    /* max-width: 100%; */
+    max-width: 250px!important;
+  max-height: 120px!important;
     height: auto;
     margin-left: 0;
   }
 
-  .images-container {
-    flex-direction: column;
+ .text-gif{
+  
+  margin-left: 0px!important;
+  font-family: google sans!important;
+  font-size: 2em!important;
+  font-weight: 50!important;
+  
+
+ }
+
+  .images-container  {
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content: center!important;
+    align-items: center!important;
+    /* margin-bottom: 20px; */
+    
   }
+  .images-container {
+  margin-bottom: 10px!important; /* Adjust this value */
+}
+
 
   .images-container div {
-    margin: 10px 0;
+    /* width: 50px;
+    height: auto; */
+    padding-left: 5px!important;
+    margin-bottom: 250px!important;
+    max-width: 20px;
+  max-height: 20px;
   }
+  .accordion-header {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
 
-  .images-container img {
-    width: 100%;
-    height: auto;
-  }
+.accordion-content {
+  max-height: none; /* Open content by default on mobile */
+}
+.footer .address {
+  margin-top: 20px; 
+}
+
+
+.images-container img {
+  /* max-width: 50px;
+  height: auto; */
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.footer {
+  background-color: #cfe3ff; /* Light blue color */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  border-radius: 40px 40px 0px 0px;
+  height: 200px;
+}
+
+.footer-img img{
+  margin-left: 0px!important;
+  width: 50px!important;
+  height:50px!important; 
+}
+.footer-text{
+  display: flex;
+  flex-direction: column;
+}
+.address {
+  
+  font-size: 2px;
+  
+  /* display: inline; */
+  text-align: center;
+  margin-top: 5px;
+}
+ .mail {
+  /* flex-direction: column; */
+  font-size: 2px;
+  
+  /* display: inline; */
+  /* text-align: center; */
+  margin-top: 6px;
+}
+
 }
 
 /* body{
@@ -116,9 +264,12 @@
    scroll-behavior: smooth;
    scrollbar:hidden;
 } */
-body {
-    overflow: auto;
-}
+
+    body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
 
 ::-webkit-scrollbar {
     width: 0.1em;
@@ -567,6 +718,7 @@ letter-spacing: -0.022em;
     align-items: center;
     flex-direction: row;
     margin-bottom: 100px;
+    background-color:transparent;
 }
 
 .images-container div {
@@ -575,6 +727,7 @@ letter-spacing: -0.022em;
     /* position: relative; */
     /* top: 4817px;
     left: 82px; */
+    background-color:transparent;
     
 
 }
@@ -582,6 +735,7 @@ letter-spacing: -0.022em;
 .images-container img {
     width: 250px;
     height: 250px;
+    background-color:transparent;
     /* object-fit: cover; */
 }
 
@@ -653,14 +807,25 @@ letter-spacing: -0.022em;
   margin-left: 150px;
   width: 150px; 
 }
-
-.address, .mail {
+.footer-text{
   display: flex;
+  flex-direction: column;
+}
+.address {
+  
   font-size: 14px;
   
   /* display: inline; */
   text-align: center;
   margin-top: 30px;
+}
+ .mail {
+  flex-direction: column;
+  font-size: 14px;
+  
+  /* display: inline; */
+  text-align: center;
+  margin-top: 20px;
 }
 
 .icons a {
@@ -815,9 +980,10 @@ margin-left: 150px;
   </div>
 </div>
   <div class="images-container">
-    <div><img src="and2.png"></div>
-    <div><img src="flutter.png"></div>
-    <div><img src="cloud.png"></div>
+    
+    <div><img src="flutter-removebg-preview.png"></div>
+    <div><img src="cloud-removebg-preview.png"></div>
+    <div><img src="and2-removebg-preview.png"></div>
   </div>
 
 
@@ -882,15 +1048,15 @@ margin-left: 150px;
   <div class="footer-img">
     <img src="GDSC RCOEM Vertical color (1).png" alt="Footer Image">
   </div>
-  
+  <div div="footer-text">
   <div class="address">
-    Shri Ramdeobaba College of Engineering and Management, Ramdeo Tekdi, Gittikhadan,Katol Road,Nagpur- 440013
+    Shri Ramdeobaba College of Engineering and Management,<br> Ramdeo Tekdi, Gittikhadan,Katol Road,Nagpur- 440013
     
   </div>
   <div class="mail">
     dsc.rknec@gmail.com
   </div>
-  
+</div>
   
   <div class="icons">
     <!-- Add your icons for Instagram, LinkedIn, and Twitter here -->
@@ -911,12 +1077,24 @@ margin-left: 150px;
 
 
 <script>
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const body = document.body;
+  // const darkModeToggle = document.getElementById('darkModeToggle');
+  // const body = document.body;
 
-  darkModeToggle.addEventListener('change', () => {
-    body.classList.toggle('dark-mode');
-  });
+  // darkModeToggle.addEventListener('change', () => {
+  // //   body.classList.toggle('dark-mode');
+  // });
+  const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        // Add a function to toggle the navigation menu on small screens
+        function toggleNav() {
+            const nav = document.querySelector('.navtab');
+            nav.classList.toggle('show');
+        }
 </script>
 
 <!-- <script>
