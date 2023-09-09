@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+
+    
+}
+
+
+/* Adding this CSS for mobile devices */
+@media screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .navtab {
+    margin-top: 10px;
+  }
+
+  .landing-page-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .landing-page {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .btn-container {
+    margin-top: 20px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .fa-angle-double-down {
+    font-size: 32px;
+  }
+
+  .Know, .Mission, .Mission2, .Mission3 {
+    font-size: 36px;
+  }
+
+  .container1, .container2, .container3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pic1, .pic2, .pic3 {
+    margin: 0;
+  }
+
+  .text-container1, .text-container2, .text-container3 {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .text1, .text2, .text3 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .rul1, .rul2, .rul3 {
+    display: none;
+  }
+
+  .tech-pic img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .images-container {
+    flex-direction: column;
+  }
+
+  .images-container div {
+    margin: 10px 0;
+  }
+
+  .images-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* body{
+   overflow: scroll; 
+   scroll-behavior: smooth;
+   scrollbar:hidden;
+} */
+body {
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0.1em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    height: 80px;
+    border: #7a7373;
+    /* position:relative; */
+
+    /* box-shadow: 2px solid grey; */
+}
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+.logo img {
+    height: 50px; /*  the height of the logo image */
+    margin-right: 10px; /* Adding some spacing between logo and text */
+  }
+
+  .navtab {
+    display: flex;
+    align-items: center;
+  }
+
+  .navtab div {
+    margin-right: 10px; /* Adding spacing between navigation items */
+  }
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* Adding this CSS to your existing stylesheet */
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+
+.switch-label {
+  margin-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+
+
+/* Adding this CSS for dark mode */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .slider {
+  background-color: #777;
+}
+
+.dark-mode .slider:before {
+  background-color: #fff;
+}
+
+.dark-mode .fa {
+  color: #fff;
+}
+
+.landing-page-img {
+  display: flex;
+  margin-top: 90px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.text{
+    text-align: center;
+    color: #7a7373;
+    margin-top: 20px;
+}
+.btn-container {
+  text-align: center;
+  align-items: center;
+}
+
+/* button */
+
+.btn {
+
+    display: inline-block;
+    align-content: center;
+    margin-top: 200px;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    margin-bottom: 20px;
+  }
+
+.btn:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+    transition: 0.7s;
+}
+
+
+
+.fa-angle-double-down {
+    font-size: 48px;
+    color: rgb(32, 30, 30);
+    display: block; 
+    margin: -22px auto; /* Center the arrows horizontally */
+    /* margin-bottom: 40px; */
+}
+/* .Know{
+    color: #3d3939;
+    font-weight: 100;
+    text-align: center;
+
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Mission{
+    color: #575252;
+    font-weight: 90;
+    text-align: center;
+border-bottom: #0a0a23;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+.Know {margin: 40px;
+  color: #3d3939;
+  font-weight: 150;
+  font-size:x-large;
+  /* width: 90px; */
+  text-align: center;
+}
+
+.Mission {
+  color: #575252;
+  font-weight: 500;
+  font-size:50px;
+  text-align: center;
+  margin-top: 70px;
+ flex-direction: column; 
+ font-family: Product Sans Medium;
+letter-spacing: -0.022em;
+}
+.border-mission{
+
+border: 3px solid #4285F4;
+width: 200px; 
+  margin: 0 auto; 
+  
+}
+.container1{
+  display: flex;
+  margin: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  justify-content: space-between;
+  margin-bottom: 140px;
+}
+.pic1{
+margin-left:60px;
+padding: 50px 30px 30px 50px;
+
+}
+.text-container1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  justify-content: space-between;
+}
+.text1{
+
+/* color: #3a2f2f; */
+color: #5F5F5F;
+
+
+}
+.rul1{
+
+
+border-right: 14px solid  #4285F4;
+border-top:50px; 
+  height: 227px; 
+  margin-left: 30px; 
+}
+
+
+.Mission2 {
+  color: #575252;
+  font-weight: 500;
+  font-size:50px;
+  text-align: center;
+  margin-top: 70px;
+ flex-direction: column; 
+ font-family: Product Sans Medium;
+letter-spacing: -0.022em;
+}
+.border-mission2{
+
+border: 3px solid #0F9D56;
+
+width: 250px; 
+  margin: 0 auto; 
+  
+}
+.Mission3 {
+ 
+  color: #353535;
+
+  font-weight: 500;
+  font-size:50px;
+  text-align: center;
+  margin-top: 70px;
+ flex-direction: column; 
+ font-family: Product Sans Medium;
+letter-spacing: -0.022em;
+
+}
+.border-mission3{
+
+border: 3px solid  #DB4437;
+
+width: 250px; 
+  margin: 0 auto; 
+  
+}
+
+.container2{
+  display: flex;
+  margin: 50px;
+  
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  justify-content: space-between;
+  margin-bottom: 140px;
+}
+.pic2{
+margin-left:60px;
+padding: 50px 30px 30px 50px;
+}
+.text-container2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  justify-content: space-between;
+}
+.text2{
+
+/* color: #3a2f2f; */
+color: #5F5F5F;
+
+
+}
+.rul2{
+
+
+border-right: 14px solid  #0F9D56;
+
+border-top:50px; 
+  height: 227px; 
+  margin-left: 30px; 
+}
+
+
+
+
+
+.container3{
+  display: flex;
+  margin: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  justify-content: space-between;
+
+ 
+height: 315px;
+margin-bottom: 140px;
+
+}
+.pic3{
+margin: left 20px;
+padding: 50px 30px 30px 50px;
+
+}
+.text-container3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  /* justify-content: space-between; */
+  text-align: right;
+}
+.text3{
+
+/* color: #3a2f2f; */
+color: #5F5F5F;
+
+}
+.rul3{
+
+
+border-right: 14px solid #DB4437;
+border-top:50px; 
+  height: 227px; 
+  margin-left: 30px;
+}
+
+/* for techs */
+
+.Tech {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+margin: 30px; 
+margin-top: 90px;
+}
+
+
+.gif-container {
+  flex-shrink: 0; /* Prevent the GIF from growing */
+}
+
+.gif {
+  margin-left: 100px;
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+}
+
+.text-gif {
+  margin-left: 1px; /* Adding space between the GIF and text */
+ 
+  font-family: Google Sans;
+font-size: 35px;
+font-weight: 550;
+/* line-height: 105px; */
+letter-spacing: -0.022em;
+/* text-align: center; */
+
+}
+.images-container {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.images-container div {
+    width:260px;
+    height: 260px;
+    /* position: relative; */
+    /* top: 4817px;
+    left: 82px; */
+    
+
+}
+
+.images-container img {
+    width: 250px;
+    height: 250px;
+    /* object-fit: cover; */
+}
+
+
+
+
+
+
+
+/* for accordian */
+.faqs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordion {
+    border: 1px solid #ccc;
+    margin: 10px auto; 
+    border-radius: 5px;
+    max-width: 600px; 
+    display: flex; /* Added flex for border placement */
+}
+
+/* Add a border on the left */
+.accordion:before {
+    content: "";
+    border-left: 3px solid blue;
+    height: 100%; 
+    margin-right: 10px; 
+}
+
+.accordion-header {
+    background-color: #f5f5f5;
+    padding: 10px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding: 10px;
+    flex: 3; 
+    box-sizing: border-box;
+}
+
+.accordion-input {
+    display: none;
+}
+
+.accordion-input:checked + .accordion-header + .accordion-content {
+    max-height: 500px; 
+}
+
+
+
+.footer {
+  background-color: #cfe3ff; /* Light blue color */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 118px 118px 0px 0px;
+  height: 250px;
+}
+
+.footer-img img {
+  margin-left: 150px;
+  width: 150px; 
+}
+
+.address, .mail {
+  display: flex;
+  font-size: 14px;
+  
+  /* display: inline; */
+  text-align: center;
+  margin-top: 30px;
+}
+
+.icons a {
+
+  margin-left: 1px;margin-right: 100px; /* Adding some space between the icons */
+}
+.icons{
+  height: 100px;
+  width: 100px;
+}
+.tech-pic{
+margin-left: 150px;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        
+        <div class="logo" >
+        <div><img src="logo2.png"></div>
+
+        <div><h3>GDSC RCOEM</h3></div>
+    </div>
+        
+
+        <nav class="navtab">
+            
+        
+            <div><a href="#home">Home</a></div>
+            <div><a href="#events">Events</a></div>
+            <div><a href="#tean">Team</a></div>
+            <div><a href="#alumni">Alumni</a></div>
+            <div><a href="#contact">Contact</a></div>
+
+            <div><label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+              </label></div> 
+            </nav>
+    </header>
+
+
+<div id="home" class="landing-page">
+    <div class="landing-page-img">
+        <img src="Google Developer Student Clubs (1).png">
+        <img src="RCOEM Chapter.png">
+        <img src="Asset 1 1.png">
+    </div>
+
+        <div class="text"><h1>Google Developer Student Clubs are community groups <br> for college and university students interested in <br>Google developer technologies.
+        </h1></div>
+        
+        <div class="btn-container" >
+        <button class="btn">JOIN US</button>
+        <i class="fa fa-angle-double-down" style="font-size:48px;color:rgb(32, 30, 30)"></i>
+        <i class="fa fa-angle-double-down" style="font-size:48px;color:rgb(32, 30, 30)"></i>
+    </div>
+   
+    <div id="events" class="Know">
+        <h1>Get To Know Us!</h1>
+    </div>
+    <!-- <div class="Mission">OUR MISSION
+      <div class="border-radius"></div>
+    </div> -->
+    <div id="team"  class="Mission">Our Mission
+      <div class="border-mission"></div>
+    </div>
+    
+    
+    
+
+
+<div class="container1">
+  <div class="pic1"> <img src="amico.png"> </div>
+   
+ 
+
+  <div class="text-container1">
+    <div class="text1"><h1>Our mission involves community engagement,<br> leadership development, building strong tech <br> foundation, while enabling all tech enthusiasts to <br> contribute to the global society.</h1></div>
+    <div class="rul1"></div>
+  </div>
+
+</div>
+
+
+<div>
+  <div id="alumni"  class="Mission2">Our Perspective
+    <div class="border-mission2"></div>
+</div>
+
+
+
+<div class="container2">
+
+  <div class="text-container2">
+    <div class="rul2"></div>
+    <div class="text2"><h1>We’re a community-driven initiative aiming to bridge the<br> gap between research and practice , develop <br>evolutionary thinking and network throughout the<br> process. We believe in connecting fellow developers,<br> spreading stimulative ideas and working for a solution<br> driven team.</h1></div>
+    
+  </div>
+
+
+  <div class="pic2"> <img src="Frame.png"> </div>
+   
+ 
+
+  
+
+</div>
+
+
+<div>
+  <div class="Mission3">What Keeps Us Going?
+    <div class="border-mission3"></div>
+</div>
+
+<div class="container3">
+  <div class="pic3"> <img src="Group (1).png"> </div>
+   
+ 
+
+  <div class="text-container3">
+    <div class="text3"><h1>Our club helps students to connect,learn,empower<br>and grow.Teamwork,innovative thinking,<br>communication,and leading with solutions is what helps us achieve new <br>heights.
+      The entire team works in coordination, to inspire and <br>motivate the upcoming coding community to evolve<br> their skills and broaden their horizons of knowledge.</h1></div>
+    <div class="rul3"></div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+<div class="tech-pic">
+  <!-- for icons -->
+  <img src="png2.png" >
+</div>
+
+
+
+
+
+<div class="Tech">
+
+<div class="gif-container">
+  <img src="Animation.gif" alt="GIF" class="gif">
+</div>
+  <div class="text-gif">
+    <h1>Technologies</h1>
+    <h4>Domains That Excite Us to Collaborate and Teach!</h4>
+  </div>
+</div>
+  <div class="images-container">
+    <div><img src="and2.png"></div>
+    <div><img src="flutter.png"></div>
+    <div><img src="cloud.png"></div>
+  </div>
+
+
+
+
+<div class="faqs">
+  <h1>FAQS</h1>
+</div>
+
+<div class="accordion">
+  <input type="checkbox" class="accordion-input" id="section1">
+  <label class="accordion-header" for="section1">What is GDSC?</label>
+  <div class="accordion-content">
+      <p>Google Developer Student Clubs (GDSC) are community groups for college and university students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a GDSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.</p>
+  </div>
+</div>
+
+<div class="accordion">
+  <input type="checkbox" class="accordion-input" id="section2">
+  <label class="accordion-header" for="section2">How can you become a part of GDSC ?</label>
+  <div class="accordion-content">
+      <p>We conduct an annual team recruitment process. The details of recruitment are posted online a few weeks prior. It’s a two-step process involving form filling and personal interview. Students acing both rounds are selected to be part of the core team.</p>
+  </div>
+</div>
+
+<div class="accordion">
+  <input type="checkbox" class="accordion-input" id="section3">
+  <label class="accordion-header" for="section3">What does a GDSC Lead do?</label>
+  <div class="accordion-content">
+      <p>A GDSC Lead fills a lot of shoes. He works with the university to build the club, recruit the core team, host workshops, build projects, collaborate with local partners.</p>
+  </div>
+</div>
+
+<div class="accordion">
+  <input type="checkbox" class="accordion-input" id="section4">
+  <label class="accordion-header" for="section4">How is DSC related to Google?</label>
+  <div class="accordion-content">
+      <p>A GDSC Lead fills a lot of shoes. He works with the university to build the club, recruit the core team, host workshops, build projects, collaborate with local partners.</p>
+  </div>
+</div>
+
+<div class="accordion">
+  <input type="checkbox" class="accordion-input" id="section5">
+  <label class="accordion-header" for="section5">How to reach us?</label>
+  <div class="accordion-content">
+      <p>Mail us at "dsc.rknec@gmail.com "</p>
+  </div>
+</div>
+
+
+<!-- <div class="footer">
+<div class="footer-img">
+  <img src="GDSC RCOEM Vertical color (1).png" alt="">
+</div>
+
+<div class="address">Shri Ramdeobaba College of Engineering and Management, Ramdeo Tekdi, Gittikhadan,Katol Road,Nagpur- 440013</div>
+<div class="mail">dsc.rknec@gmail.com</div>
+<div class="icons"></div>
+</div> -->
+
+<div  id="contact" class="footer">
+  <div class="footer-img">
+    <img src="GDSC RCOEM Vertical color (1).png" alt="Footer Image">
+  </div>
+  
+  <div class="address">
+    Shri Ramdeobaba College of Engineering and Management, Ramdeo Tekdi, Gittikhadan,Katol Road,Nagpur- 440013
+    
+  </div>
+  <div class="mail">
+    dsc.rknec@gmail.com
+  </div>
+  
+  
+  <div class="icons">
+    <!-- Add your icons for Instagram, LinkedIn, and Twitter here -->
+    <!-- Example: -->
+    <!-- <a href="#"><img src="instagram-icon.png" alt="Instagram"></a> -->
+    <a href="#" class="fa fa-facebook" alt="facebook" ></a>
+<a href="#" class="fa fa-twitter" alt="Twitter"></a>
+<a href="#" class="fa fa-instagram" alt="Instagram"></a>
+
+    <!-- <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a> -->
+  </div>
+</div>
+
+
+
+
+
+
+<script>
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  darkModeToggle.addEventListener('change', () => {
+    body.classList.toggle('dark-mode');
+  });
+</script>
+
+<!-- <script>
+  function toggleAccordion() {
+      var content = document.querySelector('.accordion-content');
+      content.classList.toggle('show-content');
+  }
+  </script> -->
+</body>
+</html>
